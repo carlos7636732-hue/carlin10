@@ -1,0 +1,422 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Internet e o Uso do Celular</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", "Segoe Print", cursive;
+    background: #dcdcdc;
+    color: #222;
+}
+
+/* FOLHA */
+.folha {
+    width: 90%;
+    max-width: 900px;
+    min-height: 1100px;
+    margin: 40px auto;
+    padding: 60px 70px;
+    background:
+        repeating-linear-gradient(
+            to bottom,
+            #fff 0px,
+            #fff 31px,
+            #9ec5e5 32px
+        );
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    position: relative;
+}
+
+/* MARGEM VERMELHA */
+.folha::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 55px;
+    width: 2px;
+    background: #e88;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    background: rgba(255,255,255,0.92);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid #ddd;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: #173f67;
+    margin: 0 0 20px;
+}
+
+.dados {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.dados input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #555;
+    padding: 8px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+}
+
+/* TEXTO INICIAL */
+.introducao {
+    background: rgba(255,255,255,0.88);
+    padding: 18px 25px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* QUESTÕES */
+.questao {
+    background: rgba(255,255,255,0.92);
+    padding: 20px 25px;
+    margin: 25px 0;
+    border-radius: 12px;
+    border-left: 6px solid #2673b8;
+}
+
+.questao h2 {
+    font-family: Arial, sans-serif;
+    color: #174d7a;
+    font-size: 21px;
+    margin-top: 0;
+}
+
+.resposta {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.resposta strong {
+    color: #174d7a;
+}
+
+/* CAMPO PARA ESCREVER */
+textarea {
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
+    border: 1px dashed #777;
+    border-radius: 8px;
+    padding: 12px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 17px;
+    background: rgba(255,255,255,0.7);
+    outline: none;
+}
+
+textarea:focus {
+    border: 2px solid #2673b8;
+}
+
+/* BOTÕES */
+.botoes {
+    text-align: center;
+    margin: 30px 0;
+}
+
+button {
+    border: none;
+    padding: 12px 22px;
+    margin: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #2673b8;
+    color: white;
+}
+
+button:hover {
+    background: #174d7a;
+}
+
+/* RODAPÉ */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+}
+
+/* CELULAR */
+@media (max-width: 700px) {
+
+    .folha {
+        width: 96%;
+        padding: 40px 30px 40px 65px;
+        margin: 15px auto;
+    }
+
+    .folha::before {
+        left: 48px;
+    }
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .questao h2 {
+        font-size: 18px;
+    }
+
+    .resposta {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="folha">
+
+    <div class="cabecalho">
+
+        <h1>📱 Internet e o Uso do Celular</h1>
+
+        <div class="dados">
+
+            <input type="text"
+                   id="nome"
+                   placeholder="Nome do aluno">
+
+            <input type="text"
+                   id="turma"
+                   placeholder="Turma">
+
+            <input type="text"
+                   id="professor"
+                   placeholder="Professor">
+
+            <input type="date"
+                   id="data">
+
+        </div>
+
+    </div>
+
+
+    <div class="introducao">
+
+        <p>
+            A internet pode aproximar pessoas e oferecer contato com alguém
+            que tenha o mesmo interesse, mas que não mora, por exemplo, perto.
+            Uma comunidade pode estar em aproximação até um ponto de
+            pertencimento a uma coletividade, mas, por outro lado, a internet
+            pode afastar quem está perto de nós.
+        </p>
+
+        <p>
+            Algumas pessoas podem desenvolver uma dependência do uso da
+            internet e do celular, causando dificuldades no convívio e na
+            comunicação com outras pessoas.
+        </p>
+
+    </div>
+
+
+    <!-- QUESTÃO 1 -->
+
+    <div class="questao">
+
+        <h2>
+            1. Qual é o comportamento do adolescente na imagem de abertura?
+        </h2>
+
+        <div class="resposta">
+
+            <strong>Resposta:</strong>
+
+            A internet pode aproximar pessoas. Se quisermos falar com alguém
+            que tenha os mesmos interesses ou problemas que nós, por exemplo,
+            basta usar um celular conectado.
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTÃO 2 -->
+
+    <div class="questao">
+
+        <h2>
+            2. Qual é o seu comportamento em relação ao uso do celular?
+        </h2>
+
+        <div class="resposta">
+
+            <strong>Resposta:</strong>
+
+            Você sabia que alguém pode ficar tão dependente do uso do celular
+            a ponto de isso se tornar uma doença?
+
+        </div>
+
+    </div>
+
+
+    <!-- QUESTÃO 3 -->
+
+    <div class="questao">
+
+        <h2>
+            3. Que outros prejuízos à saúde você acredita que o uso excessivo
+            do celular pode acarretar?
+        </h2>
+
+        <div class="resposta">
+
+            <strong>Resposta:</strong>
+
+            A nomofobia é um exemplo. Existem também impactos relacionados
+            ao uso intensivo de dispositivos digitais.
+
+        </div>
+
+    </div>
+
+
+    <!-- ESPAÇO PARA O ALUNO -->
+
+    <div class="questao">
+
+        <h2>✏️ Minha conclusão</h2>
+
+        <p class="resposta">
+            Escreva aqui sua conclusão sobre o uso da internet e do celular:
+        </p>
+
+        <textarea
+            id="conclusao"
+            placeholder="Digite sua conclusão aqui..."></textarea>
+
+    </div>
+
+
+    <div class="botoes">
+
+        <button onclick="salvar()">
+            💾 Salvar respostas
+        </button>
+
+        <button onclick="window.print()">
+            🖨️ Imprimir trabalho
+        </button>
+
+        <button onclick="limpar()">
+            🗑️ Limpar
+        </button>
+
+    </div>
+
+
+    <footer>
+
+        📚 Trabalho escolar — Internet e Tecnologia<br>
+        Desenvolvido em HTML
+
+    </footer>
+
+</div>
+
+
+<script>
+
+/* SALVAR */
+function salvar() {
+
+    localStorage.setItem("nome",
+        document.getElementById("nome").value);
+
+    localStorage.setItem("turma",
+        document.getElementById("turma").value);
+
+    localStorage.setItem("professor",
+        document.getElementById("professor").value);
+
+    localStorage.setItem("data",
+        document.getElementById("data").value);
+
+    localStorage.setItem("conclusao",
+        document.getElementById("conclusao").value);
+
+    alert("✅ Trabalho salvo com sucesso!");
+}
+
+
+/* CARREGAR */
+window.onload = function() {
+
+    document.getElementById("nome").value =
+        localStorage.getItem("nome") || "";
+
+    document.getElementById("turma").value =
+        localStorage.getItem("turma") || "";
+
+    document.getElementById("professor").value =
+        localStorage.getItem("professor") || "";
+
+    document.getElementById("data").value =
+        localStorage.getItem("data") || "";
+
+    document.getElementById("conclusao").value =
+        localStorage.getItem("conclusao") || "";
+
+}
+
+
+/* LIMPAR */
+function limpar() {
+
+    if (confirm("Deseja realmente apagar os dados?")) {
+
+        localStorage.clear();
+
+        document.getElementById("nome").value = "";
+        document.getElementById("turma").value = "";
+        document.getElementById("professor").value = "";
+        document.getElementById("data").value = "";
+        document.getElementById("conclusao").value = "";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+```
